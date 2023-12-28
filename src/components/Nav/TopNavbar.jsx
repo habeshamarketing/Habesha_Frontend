@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import { Link } from 'react-router-dom'
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
@@ -69,9 +70,9 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <a href="/" style={{ padding: "10px 30px 10px 0" }}>
+              <Link to="/login" style={{ padding: "10px 30px 10px 0" }}>
                 Log in
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer flexCenter">
               <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
