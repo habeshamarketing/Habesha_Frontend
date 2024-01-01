@@ -75,7 +75,7 @@ export default function ClientSlider() {
           </h1>
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <a href="https://t.me/EthEbay">
+          <a href="https://t.me/EthEbay">  
             <h1 className=" flex h-screen mt-8 ml-11 text-[70px]">
               <FaTelegram />
             </h1>
