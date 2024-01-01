@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { MdAttachEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import login_bg from '../assets/img/login_bg4.png'
@@ -6,9 +6,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../index.css'
 import { Axios } from '../Axios';
 import { toast } from 'react-toastify';
+import { UserContext } from '../Context/userContext';
 
 const Login = () => {
-    
+    const [userData, setUserData] = useContext(UserContext)
+    console.log(userData)
     const navigate = useNavigate()
     const [form, setForm] = useState({
       email: '',
@@ -21,11 +23,17 @@ const Login = () => {
     const handleSubmit = async (e) => {
       e.preventDefault()
       try {
-         await Axios.post('/login',{email: form.email, password: form.password})
+        const res = await Axios.post('/login',{email: form.email, password: form.password})
         setForm({
           email: "",
           password: "",
         });
+        console.log(res)
+        setUserData({
+          // email: 'hello',
+          // firstname: 'hello',
+          token: res.data.token
+        })
         navigate('/')
             toast.success("Login succesfully", {
               position: "top-center",

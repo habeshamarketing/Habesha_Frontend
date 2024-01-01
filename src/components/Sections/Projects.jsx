@@ -20,7 +20,8 @@ export default function Projects() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Projects</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
@@ -95,18 +96,39 @@ export default function Projects() {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              {/* <h4 className="font15 semiBold">A few words about company</h4> */}
+              <h2 className="font40 extraBold">Habesha Marketing</h2>
               <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Habesha Digital Marketing is dedicated to helping companies
+                enhance their brand recognition and expand their reach in the
+                Ethiopian market With more than 3+ years of experience and a
+                deep understanding of the ever-evolving landscape of digital
+                marketing. With our expertise in advertising and marketing, we
+                provide suitable platforms and strategies that effectively
+                communicate brand messages to a targeted audience. Our team of
+                professionals is committed to delivering innovative solutions
+                and delivering tangible results for our clients. Whether it's
+                through digital campaigns, print media, or other advertising
+                channels, Habesha Marketing is for effective solutions tailored
+                to meet the unique needs of our client’s brand's success in
+                Ethiopia.
               </p>
-              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
+              <ButtonsRow
+                className="flexNullCenter"
+                style={{ margin: "30px 0" }}
+              >
                 <div style={{ width: "190px" }}>
-                  <FullButton title="Get Started" action={() => alert("clicked")} />
+                  {/* <FullButton
+                    title="Get Started"
+                    action={() => alert("clicked")}
+                  /> */}
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                  {/* <FullButton
+                    title="Contact Us"
+                    action={() => alert("clicked")}
+                    border
+                  /> */}
                 </div>
               </ButtonsRow>
             </AddRight>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
@@ -8,10 +8,14 @@ import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
 import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
 import CheckMark from "../../assets/svg/Checkmark";
+import { UserContext } from "../../Context/userContext";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
 
 export default function PricingTable({ icon, price, title, text,  offers, action }) {
   let getIcon;
-
+  const [userData, setUserData] = useContext(UserContext)
   switch (icon) {
     case "roller":
       getIcon = <RollerIcon />;
@@ -29,6 +33,21 @@ export default function PricingTable({ icon, price, title, text,  offers, action
       getIcon = <RollerIcon />;
       break;
   }
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+        toast.error(`please login first`, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      navigate("/login");
+  }
 
   return (
     <Wrapper className="whiteBg radius8 shadow">
@@ -43,8 +62,18 @@ export default function PricingTable({ icon, price, title, text,  offers, action
       <div>
         {offers
           ? offers.map((item, index) => (
-              <div className="flexNullCenter" style={{ margin: "15px 0" }} key={index}>
-                <div style={{ position: "relative", top: "-1px", marginRight: "15px" }}>
+              <div
+                className="flexNullCenter"
+                style={{ margin: "15px 0" }}
+                key={index}
+              >
+                <div
+                  style={{
+                    position: "relative",
+                    top: "-1px",
+                    marginRight: "15px",
+                  }}
+                >
                   {item.cheked ? (
                     <div style={{ minWidth: "20px" }}>
                       <CheckMark />
@@ -59,7 +88,15 @@ export default function PricingTable({ icon, price, title, text,  offers, action
           : null}
       </div>
       <div style={{ maxWidth: "120px", margin: "30px auto 0 auto" }}>
-        <FullButton title="Buy" action={action} />
+        {userData.token ? (
+          <a href="https://t.me/EthEbay">
+            <FullButton title="Order" action={action} />
+          </a>
+        ) : (
+          <Link onClick={handleClick}>
+            <FullButton title="Order" action={action} />
+          </Link>
+        )}
       </div>
     </Wrapper>
   );

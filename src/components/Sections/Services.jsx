@@ -5,10 +5,11 @@ import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import AddImage1 from "../../assets/img/bg2.jpg";
+import AddImage2 from "../../assets/img/bg3.jpg";
+import AddImage3 from "../../assets/img/bg4.jpg";
+import AddImage4 from "../../assets/img/bg5.jpg";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -23,7 +24,8 @@ export default function Services() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
@@ -33,25 +35,35 @@ export default function Services() {
               <ServiceBox
                 icon="roller"
                 title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                subtitle="
+Explore a range of tailored graphic design solutions on our Services page. From captivating logos to comprehensive visual identity makeovers, our skilled team delivers impactful designs. Specializing in logo design, brand identity, print and digital collateral, and more, we ensure your visuals align with contemporary design trends. Collaborate with us to transform your ideas into compelling realities that leave a lasting impression."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                title="Web Development"
+                subtitle="
+
+
+Explore our Web Development Services for tailored websites that seamlessly blend innovation and functionality. Specializing in front-end and back-end development, CMS integration, and responsive design, we ensure your site stands out with optimal user experiences. Elevate your digital presence and achieve your goals with our expert team dedicated to crafting impactful online solutions."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                title="Mobile Development"
+                subtitle="
+At Habesha marketing, we believe that successful mobile apps are built with the user in mind. Our talented team of designers creates intuitive and visually appealing interfaces that provide a seamless user experience. We focus on understanding your target audience and their needs to deliver a mobile app that engages and delights users. Whether it's crafting eye-catching visuals or implementing smooth navigation, our user-centric approach ensures that your app not only looks great but also functions flawlessly."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+              <ServiceBox
+                icon="digital"
+                title="Digital Marketing"
+                subtitle="
+Elevate your brand with our Digital Marketing Services. We specialize in strategic online campaigns, SEO, social media, and content marketing. Our expert team maximizes your online visibility, engages your target audience, and drives results. Partner with us to navigate the dynamic digital landscape and achieve your marketing goals effectively."
+              />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -59,18 +71,43 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
+                {/* <h4 className="font15 semiBold">A few words about company</h4> */}
+                <h2 className="font40 extraBold">Habesha Marketing</h2>
                 <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Habesha Digital Marketing is dedicated to helping companies
+                  enhance their brand recognition and expand their reach in the
+                  Ethiopian market With more than 3+ years of experience and a
+                  deep understanding of the ever-evolving landscape of digital
+                  marketing. With our expertise in advertising and marketing, we
+                  provide suitable platforms and strategies that effectively
+                  communicate brand messages to a targeted audience. Our team of
+                  professionals is committed to delivering innovative solutions
+                  and delivering tangible results for our clients. Whether it's
+                  through digital campaigns, print media, or other advertising
+                  channels, Habesha Marketing is for effective solutions
+                  tailored to meet the unique needs of our client’s brand's
+                  success in Ethiopia.
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                <ButtonsRow
+                  className="flexNullCenter"
+                  style={{ margin: "30px 0" }}
+                >
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
+                    <Link to="/login">
+                      <FullButton
+                        title="Log In"
+                        // action={() => alert("clicked")}
+                      />
+                    </Link>
                   </div>
                   <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                    <Link to="/register">
+                      <FullButton
+                        title="Sign Up"
+                        // action={() => alert("clicked")}
+                        border
+                      />
+                    </Link>
                   </div>
                 </ButtonsRow>
               </AddLeft>

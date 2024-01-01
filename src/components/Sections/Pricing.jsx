@@ -9,60 +9,91 @@ export default function Pricing() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Check Our Pricing</h1>
+            <h1 className="font40 extraBold">Web-Development Packages</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Explore our Web Development Services for tailored websites that
+              seamlessly blend innovation and functionality.
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Specializing in front-end and back-end development, CMS
+              integration, and responsive design, we ensure your site stands out
+              with optimal user experiences
             </p>
           </HeaderInfo>
           <TablesWrapper className="flexSpaceNull">
             <TableBox>
               <PricingTable
                 icon="roller"
-                price="$29,99/mo"
-                title="Starter"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                price="6500 ETB."
+                title="Basic Package "
+                text="For Small Business."
                 offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: false },
-                  { name: "Product", cheked: false },
-                  { name: "Product Offer", cheked: false },
+                  { name: "Strategy & Consulting", cheked: true },
+                  { name: "Free Logo Design", cheked: true },
+                  { name: "Starting from Birr 6,500", cheked: true },
+                  {
+                    name: "Clean & Responsive (Mobile Friendly)",
+                    cheked: true,
+                  },
+                  { name: "User Experience", cheked: true },
+                  { name: "Social Medias Integration", cheked: true },
                 ]}
-                action={() => alert("clicked")}
+                // action={() => alert("clicked")}
               />
             </TableBox>
             <TableBox>
               <PricingTable
                 icon="monitor"
-                price="$49,99/mo"
-                title="Basic"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                price="11,150 ETB."
+                title="Standard Package "
+                text="For medium size enterprises."
                 offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: false },
+                  { name: "Free Logo Design", cheked: true },
+                  { name: "Unlimited Pages", cheked: true },
+                  {
+                    name: "Website Security, Firewall, and Malware Scanning",
+                    cheked: true,
+                  },
+                  {
+                    name: "1 Page Search Engine Optimization (SEO)",
+                    cheked: true,
+                  },
+                  { name: "1 Month Free Maintenance/Support", cheked: true },
+                  { name: "Social Medias Integration", cheked: true },
+                  { name: "Booking Forms", cheked: true },
+                  {
+                    name: "Clean & Responsive (Mobile Friendly)",
+                    cheked: true,
+                  },
                 ]}
-                action={() => alert("clicked")}
+                // action={() => alert("clicked")}
               />
             </TableBox>
             <TableBox>
               <PricingTable
                 icon="browser"
-                price="$59,99/mo"
-                title="Golden"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                price="16,150 ETB."
+                title="Professional Package "
+                text="For online selling Companies."
                 offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: true },
+                  { name: "Free Logo Design", cheked: true },
+                  { name: "Unlimited Pages", cheked: true },
+                  { name: "Booking Forms", cheked: true },
+                  {
+                    name: "3 Pages Search Engine Optimization (SEO)",
+                    cheked: true,
+                  },
+                  { name: "2 Month Free Maintenance/Support", cheked: true },
+                  { name: "Social Medias Integration", cheked: true },
+                  {
+                    name: "Website Security, Firewall, and Malware Scanning",
+                    cheked: true,
+                  },
+                  {
+                    name: "Clean & Responsive (Mobile Friendly)",
+                    cheked: true,
+                  },
                 ]}
-                action={() => alert("clicked")}
+                // action={() => alert("clicked")}
               />
             </TableBox>
           </TablesWrapper>
