@@ -92,15 +92,15 @@ Elevate your brand with our Digital Marketing Services. We specialize in strateg
                   className="flexNullCenter"
                   style={{ margin: "30px 0" }}
                 >
-                  <div style={{ width: "190px" }}>
+                  {/* <div style={{ width: "190px" }}>
                     <Link to="/login">
                       <FullButton
                         title="Log In"
                         // action={() => alert("clicked")}
                       />
                     </Link>
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
+                  </div> */}
+                  {/* <div style={{ width: "190px", marginLeft: "15px" }}>
                     <Link to="/register">
                       <FullButton
                         title="Sign Up"
@@ -108,7 +108,7 @@ Elevate your brand with our Digital Marketing Services. We specialize in strateg
                         border
                       />
                     </Link>
-                  </div>
+                  </div> */}
                 </ButtonsRow>
               </AddLeft>
               <AddRight>
