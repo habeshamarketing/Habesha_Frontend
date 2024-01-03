@@ -88,15 +88,11 @@ export default function PricingTable({ icon, price, title, text,  offers, action
           : null}
       </div>
       <div style={{ maxWidth: "120px", margin: "30px auto 0 auto" }}>
-        {userData.token ? (
+        
           <a href="https://t.me/EthEbay">
             <FullButton title="Order" action={action} />
           </a>
-        ) : (
-          <Link onClick={handleClick}>
-            <FullButton title="Order" action={action} />
-          </Link>
-        )}
+       
       </div>
     </Wrapper>
   );

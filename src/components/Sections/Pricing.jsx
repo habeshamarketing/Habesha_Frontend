@@ -58,12 +58,12 @@ export default function Pricing() {
                     cheked: true,
                   },
                   { name: "1 Month Free Maintenance/Support", cheked: true },
-                  { name: "Social Medias Integration", cheked: true },
-                  { name: "Booking Forms", cheked: true },
-                  {
-                    name: "Clean & Responsive (Mobile Friendly)",
-                    cheked: true,
-                  },
+                  // { name: "Social Medias Integration", cheked: true },
+                  // { name: "Booking Forms", cheked: true },
+                  // {
+                  //   name: "Clean & Responsive (Mobile Friendly)",
+                  //   cheked: true,
+                  // },
                 ]}
                 // action={() => alert("clicked")}
               />
@@ -77,21 +77,21 @@ export default function Pricing() {
                 offers={[
                   { name: "Free Logo Design", cheked: true },
                   { name: "Unlimited Pages", cheked: true },
-                  { name: "Booking Forms", cheked: true },
+                  // { name: "Booking Forms", cheked: true },
                   {
                     name: "3 Pages Search Engine Optimization (SEO)",
                     cheked: true,
                   },
                   { name: "2 Month Free Maintenance/Support", cheked: true },
                   { name: "Social Medias Integration", cheked: true },
-                  {
-                    name: "Website Security, Firewall, and Malware Scanning",
-                    cheked: true,
-                  },
-                  {
-                    name: "Clean & Responsive (Mobile Friendly)",
-                    cheked: true,
-                  },
+                  // {
+                  //   name: "Website Security, Firewall, and Malware Scanning",
+                  //   cheked: true,
+                  // },
+                  // {
+                  //   name: "Clean & Responsive (Mobile Friendly)",
+                  //   cheked: true,
+                  // },
                 ]}
                 // action={() => alert("clicked")}
               />

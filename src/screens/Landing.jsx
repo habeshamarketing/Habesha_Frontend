@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Sections
 import TopNavbar from "../components/Nav/TopNavbar";
 import Header from "../components/Sections/Header";
@@ -13,18 +13,39 @@ import Footer from "../components/Sections/Footer"
 import DigitalPricing from "../components/Sections/DigitalPricing";
 
 export default function Landing() {
+
+  const [open, setOpen] = useState(false)
   return (
     <>
       <TopNavbar />
       <Header />
       <Services />
-      <About/>
+      <About />
 
       {/* <Projects /> */}
       {/* <Blog /> */}
       <Pricing />
-      <Web2Pricing />
-      <DigitalPricing/>
+      {open === false ? (
+        <button
+          className="flex justify-center items-center m-auto bg-[#7620ff] text-white py-2 rounded-2xl font-extrabold px-5 mb-5"
+          onClick={() => setOpen(true)}
+        >
+          Show More Packages
+        </button>
+      ) : null}
+      {open ? (
+        <>
+          <Web2Pricing />
+          <DigitalPricing />
+          <button
+            className="flex justify-center items-center m-auto bg-[#7620ff] text-white py-2 rounded-2xl font-extrabold px-5 mb-5"
+            onClick={() => setOpen(false)}
+          >
+            Show less
+          </button>
+        </>
+      ) : null}
+
       {/* <Contact /> */}
       <Footer />
     </>

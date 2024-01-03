@@ -122,11 +122,11 @@ export default function TopNavbar() {
                 Log in
               </Link>
             </li> */}
-            <li className="semiBold font15 pointer flexCenter">
+            {/* <li className="semiBold font15 pointer flexCenter">
               <Link to="/login" style={{ padding: "10px 30px 10px 0" }}>
                 Log in
               </Link>
-            </li>
+            </li> */}
           </UlWrapperRight>
         </NavInner>
       </Wrapper>
